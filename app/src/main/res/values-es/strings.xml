@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cartoon Network</string>
+    <string name="Saludo">Hola Mundo</string>
+    <string name="password">Contraseña</string>
+    <string name="name">Usuario</string>
+    <string name="loginText">Iniciar Sesión</string>
+    <string name="LoginFail">Usuario o Contraseña Incorrecto</string>
+    <string name="LoginSucces">Sesion Iniciada</string>
+    <string name="startLogo">Logo de Cartoon network</string>
+</resources>
