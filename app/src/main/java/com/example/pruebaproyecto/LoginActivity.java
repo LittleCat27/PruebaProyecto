@@ -14,7 +14,6 @@ import android.widget.Toast;
 public class LoginActivity extends AppCompatActivity {
 
     byte intentos = 0;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,13 +27,11 @@ public class LoginActivity extends AppCompatActivity {
         
         if (intentos >= 3)
         {
-
-
             Toast.makeText(this, "Demasiados Intentos, espere segundos", Toast.LENGTH_SHORT).show();
             intentos = 0;
         }
         
-        if (password.equals("1234") && username.equalsIgnoreCase("JOAQUIN")) {
+        if (password.equals("1234") && username.equalsIgnoreCase("alumno")) {
             Intent mainActivity = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(mainActivity);
             Toast.makeText(this, R.string.LoginSucces, Toast.LENGTH_SHORT).show();

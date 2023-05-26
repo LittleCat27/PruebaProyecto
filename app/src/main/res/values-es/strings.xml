@@ -8,4 +8,9 @@
     <string name="LoginFail">Usuario o Contraseña Incorrecto</string>
     <string name="LoginSucces">Sesion Iniciada</string>
     <string name="startLogo">Logo de Cartoon network</string>
+    <string name="item_home">Inicio</string>
+    <string name="item_about">Acerca de</string>
+    <string name="item_logout">Cerrar Sesion</string>
+    <string name="nav_open">Abrir</string>
+    <string name="nav_close">Cerrar</string>
 </resources>

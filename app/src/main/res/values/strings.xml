@@ -7,4 +7,9 @@
     <string name="LoginSucces">Logged in</string>
     <string name="startLogo">Cartoon network logo</string>
     <string name="app_name">Cartoon Network</string>
+    <string name="item_home">Home</string>
+    <string name="item_about">About</string>
+    <string name="item_logout">Logout</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
 </resources>
