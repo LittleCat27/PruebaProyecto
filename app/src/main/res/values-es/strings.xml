@@ -13,4 +13,11 @@
     <string name="item_logout">Cerrar Sesion</string>
     <string name="nav_open">Abrir</string>
     <string name="nav_close">Cerrar</string>
+    <string name="Texto1">¡Tu canal favorito para dirvertirte y ver a tus personajes favoritos!</string>
+    <string name="ciegos">imagenes</string>
+    <string name="info_pro">Nombre del Programador: Pablo Echevarria</string>
+    <string name="info_pro2">El trabaja desde casa</string>
+    <string name="mail">Mail: pablo@gmail.com</string>
+    <string name="phone">Numero: 2954-253051</string>
+    <string name="info_pro_header">Información de Programador</string>
 </resources>

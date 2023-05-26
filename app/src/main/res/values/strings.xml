@@ -12,4 +12,11 @@
     <string name="item_logout">Logout</string>
     <string name="nav_open">Open</string>
     <string name="nav_close">Close</string>
+    <string name="Texto1">¡Your channel to have fun with your favorite characters!</string>
+    <string name="ciegos">scroll</string>
+    <string name="info_pro">Programer Name: Pablo Echevarria</string>
+    <string name="info_pro2">He works from home</string>
+    <string name="mail">Email: pablo@gmail.com</string>
+    <string name="phone">Phone: 2954-253051</string>
+    <string name="info_pro_header">Programer Information</string>
 </resources>
