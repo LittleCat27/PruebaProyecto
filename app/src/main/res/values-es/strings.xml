@@ -22,4 +22,6 @@
     <string name="info_pro_header">Información de Programador</string>
     <string name="Texto2">Somos el canal que le lleva la felicidad a los niños</string>
     <string name="Texto3">Siempre planeamos traer nuevas series y traer material divertido para toda la familia</string>
+    <string name="many_try">"Demasiados intentos, espere "</string>
+    <string name="seconds">" segundos"</string>
 </resources>

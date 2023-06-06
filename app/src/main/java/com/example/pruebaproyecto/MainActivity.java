@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -23,10 +26,48 @@ public class MainActivity extends AppCompatActivity {
         botonBerreta();
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_basic, menu);
+        return true;
+    }
+
+    public void finishParent()
+    {
+        finish();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 3) {
+            if (resultCode == RESULT_OK) {
+                this.finish();
+            }
+        }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.mnuHome:
+                return true;
+            case R.id.mnuAbout:
+                Intent i = new Intent(this, ProgramadorActivity.class);
+                super.startActivityForResult(i,3);
+                return true;
+            case R.id.mnuCerrar:
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
     public void botonBerreta()
     {
-        Button b = findViewById(R.id.BTN_ABOUT);
         ImageView iC = findViewById(R.id.img_cartoon);
         ImageView iP = findViewById(R.id.img_powerpuff);
         ImageView iD = findViewById(R.id.img_drama);
@@ -54,12 +95,6 @@ public class MainActivity extends AppCompatActivity {
             Intent i = new Intent(Intent.ACTION_VIEW);
             i.setData(Uri.parse("https://www.cartoonnetwork.com.ar/show/drama-total-todos-estrellas/juegos"));
             startActivity(i);
-        });
-
-
-        b.setOnClickListener(view -> {
-        Intent i = new Intent(this, ProgramadorActivity.class);
-        startActivity(i);
         });
     }
 

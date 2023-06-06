@@ -28,18 +28,26 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+
+    public void showToast(String texto)
+    {
+        Toast.makeText(this, texto, Toast.LENGTH_SHORT).show();
+    }
     private void validadInicio(String password, String username)
     {
         
         if (intentos >= 3)
         {
+            if(tiempo.getTime() <= Calendar.getInstance().getTimeInMillis()) {
+                intentos = 0;
+                validadInicio(password, username);
+                return;
+            }
             long aux = tiempo.getTime() - Calendar.getInstance().getTimeInMillis();
             long segundos = aux/1000;
-            Toast.makeText(this, "Demasiados Intentos, espere "+ segundos +" segundos", Toast.LENGTH_SHORT).show();
-
-            if(tiempo.getTime() <= Calendar.getInstance().getTimeInMillis())
-            intentos = 0;
-            else return;
+            String message = getString(R.string.many_try) + String.valueOf(segundos) + getString(R.string.seconds);
+            showToast(message);
+            return;
         }
         
         if (password.equals("1234") && username.equalsIgnoreCase("alumno")) {
@@ -50,7 +58,7 @@ public class LoginActivity extends AppCompatActivity {
         else
         {
             intentos++;
-            Toast.makeText(this, R.string.LoginFail, Toast.LENGTH_SHORT).show();
+            showToast(getString(R.string.LoginFail));
             if (intentos >= 3)
             {
                 tiempo.setTime(Calendar.getInstance().getTimeInMillis() + 10000);
